@@ -1,104 +1,115 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --clr-main: #3a383b;
+  --clr-header: #fff;
+  --clr-section-header: #3a9de0;
+  --clr-button: #ff0000;
+  --clr-button-hover: #ff6363;
+}
+
+::selection {
+  background-color: gray;
+  color: lightgray;
 }
 
 body {
   height: 100vh;
   width: 100%;
   display: flex;
-
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 
   font-family: "Hammersmith One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-h1 {
-  color: #fff;
-}
-
-#main-menu {
-  height: 80vh;
-  width: 80%;
-  background-color: lightblue;
-
-  border-radius: 80px;
-  margin-top: 30px;
+header {
   display: flex;
-  align-items: center0;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-#top {
-  height: 150px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 50px;
+  margin-top: 10px;
 }
 
-#main-title {
-  font-size: 50px;
-}
-
-#wraper {
-  height: calc(100% - 150px);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-aside {
-  height: 90%;
-  width: 25%;
-  background-color: lightcoral;
-}
-
-main {
-  height: 90%;
-  width: 65%;
-  background-color: lightgoldenrodyellow;
-}
-
-aside,
-main {
-  margin: 30px;
-
-  border-radius: 20px;
-}
-
-nav {
-  height: 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 30px;
-}
-
-ul {
-  width: 100%;
+.section {
   height: 100%;
+  width: 33.333333%;
   display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 30px;
+  width: 160px;
+  margin: 20px;
+}
+
+.section ul {
+  display: flex;
+  height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: space-evenly;
 }
 
-li {
-  font-size: 20px;
-  cursor: pointer;
+.section ul li {
   list-style: none;
 }
 
-#dropwdown-menu {
-  display: none;
+.section ul li a {
+  text-decoration: none;
+  color: var(--clr-section-header);
+  font-size: 1.2rem;
+  position: relative;
 }
 
-#dropdown:hover #dropwdown-menu {
+.section ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--clr-main);
+  transform: scaleX(0);
+  transition-duration: 0.3s;
+}
+
+.section ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+#butt-sect {
+  justify-content: end;
+}
+
+#git-button {
+  height: 40px;
+  width: 100px;
+  margin: 20px;
+  border: none;
+  background-color: var(--clr-button);
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+
+#git-button a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#git-button:hover {
+  background-color: var(--clr-button-hover);
 }
