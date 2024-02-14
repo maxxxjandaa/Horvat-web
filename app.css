@@ -109,10 +109,6 @@ header {
   justify-content: center;
 }
 
-#git-button:hover {
-  background-color: var(--clr-button-hover);
-}
-
 #after-header {
   height: 60px;
   width: 100%;
@@ -131,12 +127,11 @@ main {
 }
 
 #dropdown-container:hover #dropdown {
-  opacity: 1;
+  display: flex;
 }
 
 #dropdown {
-  display: flex;
-  opacity: 0;
+  display: none;
   flex-direction: column;
   height: 100px;
   width: 140px;
@@ -145,7 +140,6 @@ main {
   bottom: -100px;
   left: 0;
   border-radius: 7px;
-  transition-duration: 0.15s;
   align-items: center;
 }
 
@@ -176,4 +170,21 @@ main {
 .dropdown-item {
   font-size: 0.8rem;
   margin: 5px 10px 5px 10px;
+}
+
+#container {
+  height: 100%;
+  width: 50%;
+
+  display: flex;
+  align-items: center;
+}
+
+#main-title {
+  color: #d8d8d8;
+  font-size: 7rem;
+  margin-left: 40px;
+  line-height: 6.7rem;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
