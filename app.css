@@ -98,6 +98,10 @@ header {
   transition-duration: 0.3s;
 }
 
+#git-button:hover {
+  background-color: var(--clr-button-hover);
+}
+
 #git-button a {
   text-decoration: none;
   color: #fff;
