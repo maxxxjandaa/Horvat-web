@@ -10,6 +10,7 @@
   --clr-section-header: #282828;
   --clr-button: #ff0000;
   --clr-button-hover: #ff6363;
+  --aside-width: 20%;
 }
 
 ::selection {
@@ -221,11 +222,12 @@ main {
   position: relative;
   background-color: #242424;
   z-index: -2;
+  display: flex;
 }
 
 aside {
   height: 100vh;
-  width: 20%;
+  width: var(--aside-width);
   background-color: red;
   position: fixed;
   top: 0;
@@ -260,15 +262,42 @@ aside nav ul li a {
   text-decoration: none;
   font-size: 1.1rem;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
-aside nav ul li a:hover {
-  transform: translateY(-10px);
+#img-sect {
+  height: 100%;
+  width: calc(100% - var(--aside-width));
+  z-index: -3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wraper {
+  height: 300px;
+  width: 400px;
+
+  margin-top: 20px;
+  overflow: hidden;
+  display: flex;
+  padding: 10px;
+  background-color: #282828;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.img-main {
+  margin: 20px;
 }
 /* DEMO-SPECIFIC STYLES */
 .typewriter {
   height: 100%;
-  width: 22%;
+  width: 301px;
   display: flex;
   align-items: center;
   margin-left: 10px;
@@ -284,6 +313,20 @@ aside nav ul li a:hover {
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
   animation: typing 3.5s steps(30, end), blink-caret 0.8s step-end infinite;
+}
+
+.textdiv {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textdiv p {
+  color: #e0e0e0;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 /* The typing effect */
