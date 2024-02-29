@@ -229,7 +229,7 @@ aside {
   height: 100vh;
   width: var(--aside-width);
   background-color: red;
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: #2d4263;
   z-index: -1;
